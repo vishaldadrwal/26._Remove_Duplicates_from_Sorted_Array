@@ -27,3 +27,21 @@ public:
         return k;
     }
 };
+
+
+
+# Method-II
+# set, because a set automatically removes duplicates
+
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        set<int> s(nums.begin(), nums.end());
+        int i = 0;
+        for (int x : s) {
+            nums[i] = x;
+            i++;
+        }
+        return i;
+    }
+};
